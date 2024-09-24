@@ -4,8 +4,9 @@
 
 [//]: # (This repository contains the code for the paper **"PTQ4RIS: An Effective and Efficient Post-Training Quantization Framework for Referring Image Segmentation"**.)
 
-Referring Image Segmentation (RIS), aims to segment the object referred by a given sentence in an image by understanding both visual and linguistic information. However, existing RIS methods tend to explore top-performance models, disregarding considerations for practical applications on resources-limited edge devices. This oversight poses a significant challenge for on-device RIS inference. To this end, we propose an effective and efficient post-training quantization framework termed PTQ4RIS.
-Specifically, we first conduct an in-depth analysis of the root causes of performance degradation in RIS model quantization and propose dual-region quantization (DRQ) and reorder-based outlier-retained quantization (RORQ) to address the quantization difficulties in visual and text encoders. Extensive experiments on three benchmarks with different bits settings (from 8 to 4 bits) demonstrates its superior performance. Importantly, we are the first PTQ method specifically designed for the RIS task, highlighting the feasibility of PTQ in RIS applications. 
+Referring Image Segmentation (RIS), aims to segment the object referred by a given sentence in an image by understanding both visual and linguistic information. However, existing RIS methods tend to explore top-performance models, disregarding considerations for practical applications on resources-limited edge devices. This oversight poses a significant challenge for on-device RIS inference. To this end, we propose an effective and efficient post-training quantization framework termed PTQ4RIS. Specifically, we first conduct an in-depth analysis of the root causes of performance degradation in RIS model quantization and propose dual-region quantization (DRQ) and reorder-based outlier-retained quantization (RORQ) to address the quantization difficulties in visual and text encoders. Extensive experiments on three benchmarks with different bits settings (from 8 to 4 bits) demonstrates its superior performance. Importantly, we are the first PTQ method specifically designed for the RIS task, highlighting the feasibility of PTQ in RIS applications. 
+
+Paper : [arxiv](https://github.com/gugu511yy/PTQ4RIS) / Video : [video](https://github.com/gugu511yy/PTQ4RIS)
 
 [//]: # (![PTQ4RIS Framework]&#40;image.png&#41;)
 
@@ -14,6 +15,9 @@ Specifically, we first conduct an in-depth analysis of the root causes of perfor
 The code has been verified to work with PyTorch v1.7.1 and Python 3.7.
 1. Clone this repository.
 2. Change directory to root of this repository.
+```shell
+git clone git@github.com:gugu511yy/PTQ4RIS.git
+```
 ### Package Dependencies
 1. Create a new Conda environment with Python 3.7 then activate it:
 ```shell
@@ -67,3 +71,10 @@ mkdir ./checkpoints
 python ptq4ris.py  --model lavt_one --swin_type base --dataset refcoco  --split val --resume ./checkpoints/lavt_one_8_cards_ImgNet22KPre_swin-base-window12_refcoco_adamw_b32lr0.00005wd1e-2_E40.pth  --workers 0 --ddp_trained_weights --window12 --img_size 480 --num_samples 32 --n_bits_w 8 --n_bits_a 8   
 
 ```
+### Acknowledgments
+Code in this repository is built upon several public repositories. Specifically,
+* This repo is built upon [LAVT](https://github.com/yz93/LAVT-RIS) 
+* The quantization code is partly built upon [PTQViT](https://github.com/hahnyuan/PTQ4ViT) and [PD-Quant](https://github.com/hustvl/PD-Quant).
+
+### License
+This repository is released under MIT License (see LICENSE file for details).
