@@ -93,7 +93,7 @@ python ptq4ris.py  --model lavt_one --swin_type base --dataset refcoco  --split 
 ```
 ### Acknowledgments
 Code in this repository is built upon several public repositories, thanks for those great works! Specifically,
-* This repo is built upon [LAVT](https://github.com/yz93/LAVT-RIS) 
+* Quantization model is built upon [LAVT](https://github.com/yz93/LAVT-RIS) 
 * The quantization code is partly built upon [PTQ4ViT](https://github.com/hahnyuan/PTQ4ViT) and [PD-Quant](https://github.com/hustvl/PD-Quant).
 
 ### License
