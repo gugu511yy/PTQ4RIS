@@ -96,5 +96,18 @@ Code in this repository is built upon several public repositories, thanks for th
 * Quantization model is built upon [LAVT](https://github.com/yz93/LAVT-RIS) 
 * The quantization code is partly built upon [PTQ4ViT](https://github.com/hahnyuan/PTQ4ViT) and [PD-Quant](https://github.com/hustvl/PD-Quant).
 
+## Reference
+If you find PTQ4RIS useful or relevant to your research, please cite our paper:
+
+```bibtex
+@article{jiang2024ptq4ris,
+  title={PTQ4RIS: Post-Training Quantization for Referring Image Segmentation},
+  author={Jiang, Xiaoyan and Yang, Hang and Zhu, Kaiying and Qiu, Xihe and Zhao, Shibo and Zhou, Sifan},
+  journal={arXiv preprint arXiv:2409.17020},
+  year={2024}
+}
+
+```
+
 ### License
 This repository is released under MIT License (see LICENSE file for details).
