@@ -103,8 +103,8 @@ If you find PTQ4RIS useful or relevant to your research, please cite our paper:
 @article{jiang2024ptq4ris,
   title={PTQ4RIS: Post-Training Quantization for Referring Image Segmentation},
   author={Jiang, Xiaoyan and Yang, Hang and Zhu, Kaiying and Qiu, Xihe and Zhao, Shibo and Zhou, Sifan},
-  journal={arXiv preprint arXiv:2409.17020},
-  year={2024}
+  journal={International Conference on Robotics and Automation},
+  year={2025}
 }
 
 ```
